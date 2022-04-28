@@ -1,0 +1,16 @@
+//e-books table-sabeel//
+CREATE TABLE E_BOOKS (
+id integer NOT NULL CONSTRAINT id PRIMARY KEY,
+book_id integer NOT NULL,
+isbn varchar(150),
+authors varchar(100),
+original_publication_year integer,
+title varchar(300),
+language_code varchar(50),
+average_rating numeric,
+source varchar(200));
+
+//for population the table-use your path and correct file name//
+
+FROM 'C:\YourDirectory\your_file.csv'
+  WITH (FORMAT CSV, HEADER);
